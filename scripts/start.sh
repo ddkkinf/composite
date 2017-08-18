@@ -1,0 +1,1 @@
+docker run --link nimbus:nimbus -it --net dcstorm_default --rm -v $(pwd)/../storm-topology/target/storm-topology-1.0-SNAPSHOT.jar:/topology.jar storm storm jar /topology.jar dev.argent.topology.WordCountTopology topology
