@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logging configuration for local -->
+<configuration>
+
+  <!-- DEFAULT: default console appender for root -->
+  <appender name="DEFAULT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}[%line] - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+
+  <logger name="jdbc.sqltiming" additivity="false" level="OFF"/>
+  <logger name="jdbc.audit" additivity="false" level="OFF"/>
+  <logger name="jdbc.resultset" additivity="false" level="OFF"/>
+  <logger name="jdbc.resultsettable" additivity="false" level="OFF"/>
+  <logger name="jdbc.connection" additivity="false" level="OFF"/>
+  <logger name="org.apache.zookeeper" additivity="false" level="WARN"/>
+  <logger name="org.apache.storm" additivity="false" level="WARN"/>
+  <logger name="backtype.storm" additivity="false" level="WARN" />
+  <logger name="storm.kafka" additivity="false" level="WARN" />
+
+  <!-- root -->
+  <root level="DEBUG">
+    <appender-ref ref="DEFAULT"/>
+  </root>
+
+</configuration>
